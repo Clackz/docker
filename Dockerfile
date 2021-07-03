@@ -22,7 +22,7 @@ RUN set -ex \
     && mkdir logs \
     && npm config set registry https://registry.npm.taobao.org \
     && npm install \
-    && git clone -b DOCKER_URL /scripts/docker \
+    && git clone -b $DOCKER_URLDOCKER_URL /scripts/docker \
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
     && chmod +x /usr/local/bin/docker_entrypoint.sh
 

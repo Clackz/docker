@@ -14,6 +14,8 @@ RUN set -ex \
     && apk update \
     && apk upgrade \
     && apk add --no-cache bash tzdata git moreutils curl jq \
+    && apk add --update python3-dev py3-pip \
+    && pip install qrcode \
     && rm -rf /var/cache/apk/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
@@ -24,7 +26,8 @@ RUN set -ex \
     && npm install \
     && git clone $DOCKER_URL\
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
-    && chmod +x /usr/local/bin/docker_entrypoint.sh
+    && chmod +x /usr/local/bin/docker_entrypoint.sh \
+    && sed -i "/root()/d" getCookie.py
 
 WORKDIR /scripts
 

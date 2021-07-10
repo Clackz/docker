@@ -22,6 +22,7 @@ else
   git reset --hard
   git -C /scripts/docker pull --rebase
   echo "npm install 安装最新依赖"
+  cd /scripts
   npm install --prefix /scripts
   npm install typescripts ts-node
   echo "去除docker判断"

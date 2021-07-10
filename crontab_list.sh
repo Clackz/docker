@@ -15,7 +15,7 @@
 7 0,17 * * * cd /scripts && node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 
 #美丽研究院
-41 7,12,19 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
+34 9,14,21 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 
 # 东东超市兑换奖品
 0 0 0 * * * node /scripts/jd_blueCoin.js >> /scripts/logs/jd_blueCoin.log 2>&1
@@ -56,6 +56,9 @@
 # 京东家庭号
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
+#京东食力街
+10 0 * * * python3 /scripts/jd_foodRunning.py >> /scripts/logs/jd_foodRuning.log 2>&1
+
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
@@ -81,16 +84,10 @@
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 
 # 宠汪汪
-15 0-23/2 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
-
-# 宠汪汪赛跑
-15 10 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
-
-# 宠汪汪偷好友积分与狗粮
-10 0-21/3 * * * node /scripts/jd_joy_steal.js >> /scripts/logs/jd_joy_steal.log 2>&1
+15 0-23/2 * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy.log 2>&1
 
 # 惊喜牧场
-20 0-23/3 * * * node /scripts/jd_jjxxmmcc.js >> /scripts/logs/jd_jxmc.log 2>&1
+20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
 
 # 京喜农场
 0 9,12,18 * * * node /scripts/jd_jxnc.js >> /scripts/logs/jd_jxnc.log 2>&1
@@ -166,6 +163,9 @@
 
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
+
+#众筹许愿池
+10 0,23 * * * cd /scripts && npx ts-node /scripts/jd_wishingPool.ts >> /scripts/logs/jd_wishingPool.log 2>&1
 
 # 环境测试
 0 12 * * * node /scripts/jd_api_test.js >> /scripts/logs/jd_api_test.log 2>&1

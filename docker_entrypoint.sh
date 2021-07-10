@@ -23,6 +23,7 @@ else
   git -C /scripts/docker pull --rebase
   echo "npm install 安装最新依赖"
   npm install --prefix /scripts
+  npm install typescripts ts-node
   echo "去除docker判断"
   sed -i "/root()/d" /scripts/getCookie.py
   sed -i "/root()/d" /scripts/jd_foodRunning.py

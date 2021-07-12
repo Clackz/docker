@@ -1,7 +1,7 @@
 # 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重)
 50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecodeCollection' | xargs rm -rf
 
-#收集助力码
+# 收集助力码
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1
 
 
@@ -11,10 +11,10 @@
 # 领京豆额外奖励
 10 7 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 
-#京东多合一签到
+# 京东多合一签到
 7 0,17 * * * cd /scripts && node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 
-#美丽研究院
+# 美丽研究院
 34 9,14,21 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 
 # 东东超市兑换奖品
@@ -33,7 +33,10 @@
 2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 
 # 京喜财富岛
-5 8,13,19 * * * npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+25 0-23/2 * * * cd /scripts && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+
+# 京喜财富岛热气球
+10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -56,7 +59,7 @@
 # 京东家庭号
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
-#京东食力街
+# 京东食力街
 10 0 * * * python3 /scripts/jd_foodRunning.py >> /scripts/logs/jd_foodRuning.log 2>&1
 
 # 东东农场
@@ -134,6 +137,9 @@
 # 京东全民开红包
 1 1,2,23 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 
+# 京东宠汪汪自动兑换京豆
+0 0,8,16 * * * cd /scripts && npx tsc jd_reward.ts && node jd_reward.js >> /scripts/logs/jd_reward.log 2>&1
+
 # 闪购盲盒
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 
@@ -164,8 +170,11 @@
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
 
-#众筹许愿池
+# 众筹许愿池
 10 0,23 * * * cd /scripts && npx ts-node /scripts/jd_wishingPool.ts >> /scripts/logs/jd_wishingPool.log 2>&1
+
+# 京东预存验证码
+58 7,15,23 * * * cd /scripts && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
 
 # 环境测试
 0 12 * * * node /scripts/jd_api_test.js >> /scripts/logs/jd_api_test.log 2>&1

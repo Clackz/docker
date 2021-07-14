@@ -17,6 +17,9 @@
 # 美丽研究院
 34 9,14,21 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 
+#东东超市兑换
+0 0 * * * node /scripts/jd_blueCoin.js >> /sripts/logs/jd_blueCoin.log 2>&1
+
 # 口袋书店
 1 8,12,18 * * * node /scripts/jd_bookshop.js >> /scripts/logs/jd_bookshop.log 2>&1
 

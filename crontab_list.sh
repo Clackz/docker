@@ -108,7 +108,7 @@
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 
 # 点点券
-10 0,20 * * * node /scripts/jd_necklace_new.js >> /scripts/logs/jd_necklace.log 2>&1
+#10 0,20 * * * node /scripts/jd_necklace_new.js >> /scripts/logs/jd_necklace.log 2>&1
 
 # 东东萌宠
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1

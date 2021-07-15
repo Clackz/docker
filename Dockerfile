@@ -29,8 +29,7 @@ RUN set -ex \
     && git clone $DOCKER_URL\
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
     && chmod +x /usr/local/bin/docker_entrypoint.sh \
-    && sed -i "/root()/d" /scripts/getCookie.py \
-    && sed -i "/root()/d" /scripts/jd_foodRunning.py
+    && sed -i "/root()/d" /scripts/getCookie.py 
 
 WORKDIR /scripts
 

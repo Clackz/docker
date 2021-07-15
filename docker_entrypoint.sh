@@ -26,7 +26,6 @@ else
   npm install --prefix /scripts typescript ts-node
   echo "去除docker判断"
   sed -i "/root()/d" /scripts/getCookie.py
-  sed -i "/root()/d" /scripts/jd_foodRunning.py
 fi
 ) || exit 0
 

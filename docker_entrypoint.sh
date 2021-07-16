@@ -24,8 +24,6 @@ else
   echo "npm install 安装最新依赖"
   npm install --prefix /scripts
   npm install --prefix /scripts typescript ts-node
-  echo "去除docker判断"
-  sed -i "/root()/d" /scripts/getCookie.py
 fi
 ) || exit 0
 

@@ -18,7 +18,7 @@
 7 0,17 * * * cd /scripts && node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 
 # 美丽研究院
-34 9,14,21 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
+34 0-23/2 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 
 #东东超市兑换
 0 0 * * * node /scripts/jd_blueCoin.js >> /sripts/logs/jd_blueCoin.log 2>&1
@@ -36,7 +36,7 @@
 2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 
 # 京喜财富岛
-25 0-23/2 * * * cd /scripts && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+25 * * * * cd /scripts && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
 # 京喜财富岛热气球
 10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
@@ -58,6 +58,9 @@
 
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
+
+# 早起领豆
+30 0 * * * cd /scripts/ && npx ts-node jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
 
 # 获取互助码
 20 13 * * 6 node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1

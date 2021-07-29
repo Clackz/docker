@@ -41,6 +41,9 @@
 # 京喜财富岛热气球
 10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
 
+# 京喜财富岛提现
+0 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_cashOut.ts >> /scripts/logs/jd_cfd_cashOut.log 2>&1
+
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 
@@ -89,6 +92,9 @@
 # 汪汪乐园
 0 9 * * * cd /scripts/ && npx ts-node /scripts/jd_joy_park.ts >> /scripts/logs/jd_joy_park.log 2>&1
 
+# 京东宠汪汪自动兑换京豆
+0 0,8,16 * * * cd /scripts && npx tsc jd_joy_reward.ts && node jd_joy_reward.js >> /scripts/logs/jd_joy_reward.log 2>&1
+
 # 惊喜牧场
 20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
 
@@ -134,9 +140,6 @@
 # 京东全民开红包
 1 1,2,23 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 
-# 京东宠汪汪自动兑换京豆
-0 0,8,16 * * * cd /scripts && npx tsc jd_reward.ts && node jd_reward.js >> /scripts/logs/jd_reward.log 2>&1
-
 # 闪购盲盒
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 
@@ -171,4 +174,4 @@
 0 12 * * * node /scripts/jd_api_test.js >> /scripts/logs/jd_api_test.log 2>&1
 
 # 电竞经理
-0 0-23/2 * * * node /scripts/jd_EsportsManager.js >> /scripts/logs/jd_EsportsManager.log 2>&1
+#0 0-23/2 * * * node /scripts/jd_EsportsManager.js >> /scripts/logs/jd_EsportsManager.log 2>&1

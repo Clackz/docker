@@ -15,7 +15,7 @@
 10 7 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 
 # 京东多合一签到
-7 0,17 * * * cd /scripts && node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
+7 0,17 * * * cd /scripts && npx ts-node /scripts/jd_bean_sign.ts >> /scripts/logs/jd_bean_sign.log 2>&1
 
 # 美丽研究院
 34 0-23/2 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1

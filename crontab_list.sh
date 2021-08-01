@@ -5,8 +5,8 @@
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1
 
 
-# 京东省钱大赢家
-20 * * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
+# 升级赚京豆
+0 0 * * * cd /scripts && npx ts-node jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
 
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
@@ -20,8 +20,8 @@
 # 美丽研究院
 34 0-23/2 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
 
-#东东超市兑换
-0 0 * * * node /scripts/jd_blueCoin.js >> /sripts/logs/jd_blueCoin.log 2>&1
+# 京东省钱大赢家
+20 * * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
 
 # 口袋书店
 1 8,12,18 * * * node /scripts/jd_bookshop.js >> /scripts/logs/jd_bookshop.log 2>&1
@@ -42,7 +42,7 @@
 10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
 
 # 京喜财富岛提现
-0 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_cashOut.ts >> /scripts/logs/jd_cfd_cashOut.log 2>&1
+59 23 * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -131,9 +131,6 @@
 # 京东种豆得豆
 1 7-21/2 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
 
-# 京东保价
-0 2 * * * node /scripts/jd_price.js >> /scripts/logs/jd_price.log 2>&1
-
 # 京东排行榜
 21 9 * * * node /scripts/jd_rankingList.js >> /scripts/logs/jd_rankingList.log 2>&1
 
@@ -145,9 +142,6 @@
 
 # 进店领豆
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1
-
-# ✈️天天加速
-8 0-23/3 * * * node /scripts/jd_speed.js >> /scripts/logs/jd_speed.log 2>&1
 
 # 京东极速版红包
 20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
@@ -164,14 +158,14 @@
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
 
-# 众筹许愿池
-10 0,23 * * * cd /scripts && npx ts-node /scripts/jd_wishingPool.ts >> /scripts/logs/jd_wishingPool.log 2>&1
-
 # 京东预存验证码
 58 7,15,23 * * * cd /scripts && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
 
-# 环境测试
-0 12 * * * node /scripts/jd_api_test.js >> /scripts/logs/jd_api_test.log 2>&1
+# 众筹许愿池
+10 0,23 * * * cd /scripts && npx ts-node /scripts/jd_wishingPool.ts >> /scripts/logs/jd_wishingPool.log 2>&1
 
-# 电竞经理
-#0 0-23/2 * * * node /scripts/jd_EsportsManager.js >> /scripts/logs/jd_EsportsManager.log 2>&1
+# 京喜签到
+0 0 * * * cd /scripts && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1
+
+# 环境测试
+0 12 * * * cd /scripts && npx ts-node /scripts/jd_api_test.ts >> /scripts/logs/jd_api_test.log 2>&1

@@ -45,7 +45,7 @@
 10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
 
 # 京喜财富岛提现
-59 23 * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
+0 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -65,6 +65,9 @@
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
+# 东东农场额外任务
+0 6-18/6 * * * cd /scripts/ && npx ts-node jd_fruit_moreTask.ts >> /scripts/log/jd_fruit_moreTask.log 2>&1
+
 # 早起领豆
 30 0 * * * cd /scripts/ && npx ts-node jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
 
@@ -79,6 +82,9 @@
 
 # 东东健康社区收集能量收集
 5-45/20 * * * * node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
+
+# 抽奖
+10 0 * * * cd /scripts/ && npx ts-node jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 东东工厂
 10 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1

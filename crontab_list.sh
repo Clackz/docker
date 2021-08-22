@@ -45,7 +45,7 @@
 10 1,12 * * * cd /scripts && npx tsc /scripts/jd_cfd_loop.ts && node /scripts/jd_cfd_loop.js >> /scripts/logs/jd_cfd_loop.log 2>&1
 
 # 京喜财富岛提现
-0 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
+0 * * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -119,17 +119,11 @@
 # 幸运大转盘
 4 10 * * * node /scripts/jd_market_lottery.js >> /scripts/logs/jd_market_lottery.log 2>&1
 
-# 5G超级盲盒
-0 0,1-23/3 * * * node /scripts/jd_mohe.js >> /scripts/logs/jd_mohe.log 2>&1
-
 # 京东摇钱树
 3 0-23/2 * * * node /scripts/jd_moneyTree.js >> /scripts/logs/jd_moneyTree.log 2>&1
 
 # 京东秒秒币
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
-
-# 点点券
-#10 0,20 * * * node /scripts/jd_necklace_new.js >> /scripts/logs/jd_necklace.log 2>&1
 
 # 东东萌宠
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
@@ -169,9 +163,6 @@
 
 # 京东预存验证码
 58 7,15,23 * * * cd /scripts && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
-
-# 众筹许愿池
-10 0,23 * * * cd /scripts && npx ts-node /scripts/jd_wishingPool.ts >> /scripts/logs/jd_wishingPool.log 2>&1
 
 # 京喜签到
 0 0 * * * cd /scripts && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1

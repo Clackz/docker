@@ -47,8 +47,14 @@
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 
+# 东东世界
+0 0 * * * cd /scripts && npx ts-node jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
+
 # 京喜工厂
 10 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
+
+# 京喜工厂助力
+50 * * * * node /scripts/jd_dreamFactory_help.js >> /scripts/logs/jd_dreamFactory_help.log 2>&1
 
 # 京东家庭号
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
@@ -101,9 +107,6 @@
 # 京喜工厂成团
 30 * * * * cd/scripts && npx ts-node /scripts/jd_jxgc.ts >> /scripts/logs/jd_jxgc.log 2>&1
 
-# 京喜工厂助力
-30 * * * * cd /scripts/ && npx ts-node /scripts/jd_jxgc_help.ts >> /scripts/logs/jd_jxgc_help.log 2>&1
-
 # 惊喜牧场
 20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
 
@@ -118,6 +121,9 @@
 
 # 幸运大转盘
 4 10 * * * node /scripts/jd_market_lottery.js >> /scripts/logs/jd_market_lottery.log 2>&1
+
+# 京东小魔方
+0 * * * * cd /scripts && npx ts-node /scripts/jd_mofang.ts >> /scripts/logs/jd_mofang.log 2>&1
 
 # 京东摇钱树
 3 0-23/2 * * * node /scripts/jd_moneyTree.js >> /scripts/logs/jd_moneyTree.log 2>&1
@@ -169,3 +175,6 @@
 
 # 环境测试
 0 12 * * * cd /scripts && npx ts-node /scripts/jd_api_test.ts >> /scripts/logs/jd_api_test.log 2>&1
+
+# 88红包
+5 0,6,20 * * * cd /scripts && npx ts-node /scripts/jd_88hb.ts >> /scripts/logs/jd_88hb.log 2>&1

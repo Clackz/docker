@@ -6,13 +6,13 @@
 
 
 # 88红包
-5 0,6,20 * * * cd /scripts && npx ts-node /scripts/jd_88hb.ts >> /scripts/logs/jd_88hb.log 2>&1
+5 0,6,20 * * * cd /scripts/ && npx ts-node /scripts/jd_88hb.ts >> /scripts/logs/jd_88hb.log 2>&1
 
 # 抽奖
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 升级赚京豆
-0 9,12 * * * cd /scripts && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
+0 9,12 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
 
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
@@ -21,7 +21,7 @@
 10 7 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 
 # 京东多合一签到
-7 0,17 * * * cd /scripts && npx ts-node /scripts/jd_bean_sign.ts >> /scripts/logs/jd_bean_sign.log 2>&1
+7 0,17 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_sign.ts >> /scripts/logs/jd_bean_sign.log 2>&1
 
 # 京东省钱大赢家
 20 * * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
@@ -36,19 +36,19 @@
 0 0 * * * node /scripts/jd_car_exchange.js >> /scripts/logs/jd_car_exchange.log 2>&1
 
 # 京喜财富岛
-25 * * * * cd /scripts && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+25 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
 # 京喜财富岛热气球
-10 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_balloon.ts >> /scripts/logs/jd_cfd_balloon.log 2>&1
+10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_balloon.ts >> /scripts/logs/jd_cfd_balloon.log 2>&1
 
 # 京喜财富岛捡贝壳
-10 0 * * * cd /scripts && npx ts-node /scripts/jd_cfd_shell.ts >> /scripts/logs/jd_cfd_shell.log 2>&1
+10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_shell.ts >> /scripts/logs/jd_cfd_shell.log 2>&1
 
 # 京喜财富岛提现
-0 * * * * cd /scripts && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
+0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
 
 # cookie有效性检查
-0 * * * * cd /scripts && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
+0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -57,7 +57,7 @@
 0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 
 # 东东世界
-0 0 * * * cd /scripts && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
+0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
 
 # 京喜工厂
 10 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
@@ -69,7 +69,7 @@
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
 # 京东食力街
-10 0 * * * cd /scripts && npx ts-node /scripts/jd_foodRuning.ts >> /scripts/logs/jd_foodRuning.log 2>&1
+10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_foodRuning.ts >> /scripts/logs/jd_foodRuning.log 2>&1
 
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
@@ -108,7 +108,7 @@
 0 9 * * * cd /scripts/ && npx ts-node /scripts/jd_joy_park.ts >> /scripts/logs/jd_joy_park.log 2>&1
 
 # 京喜工厂成团
-30 * * * * cd/scripts && npx ts-node /scripts/jd_jxgc.ts >> /scripts/logs/jd_jxgc.log 2>&1
+30 * * * * cd/scripts/ && npx ts-node /scripts/jd_jxgc.ts >> /scripts/logs/jd_jxgc.log 2>&1
 
 # 惊喜牧场
 20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
@@ -126,7 +126,7 @@
 4 10 * * * node /scripts/jd_market_lottery.js >> /scripts/logs/jd_market_lottery.log 2>&1
 
 # 京东小魔方
-0 * * * * cd /scripts && npx ts-node /scripts/jd_mofang.ts >> /scripts/logs/jd_mofang.log 2>&1
+0 * * * * cd /scripts/ && npx ts-node /scripts/jd_mofang.ts >> /scripts/logs/jd_mofang.log 2>&1
 
 # 京东摇钱树
 3 0-23/2 * * * node /scripts/jd_moneyTree.js >> /scripts/logs/jd_moneyTree.log 2>&1
@@ -156,7 +156,7 @@
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1
 
 # 京东极速版发财大赢家
-0 0,8,20 * * * cd /scripts && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
+0 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
 
 # 京东极速版红包
 20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
@@ -174,11 +174,11 @@
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
 
 # 京东预存验证码
-58 7,15,23 * * * cd /scripts && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
+58 7,15,23 * * * cd /scripts/ && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
 
 # 京喜签到
-0 0 * * * cd /scripts && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1
+0 0 * * * cd /scripts/ && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1
 
 # 环境测试
-0 12 * * * cd /scripts && npx ts-node /scripts/jd_api_test.ts >> /scripts/logs/jd_api_test.log 2>&1
+0 12 * * * cd /scripts/ && npx ts-node /scripts/jd_api_test.ts >> /scripts/logs/jd_api_test.log 2>&1
 

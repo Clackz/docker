@@ -9,10 +9,10 @@
 5 0,6,20 * * * cd /scripts && npx ts-node /scripts/jd_88hb.ts >> /scripts/logs/jd_88hb.log 2>&1
 
 # 抽奖
-10 0 * * * cd /scripts/ && npx ts-node jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
+10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 升级赚京豆
-0 9,12 * * * cd /scripts && npx ts-node jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
+0 9,12 * * * cd /scripts && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
 
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
@@ -57,7 +57,7 @@
 0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 
 # 东东世界
-0 0 * * * cd /scripts && npx ts-node jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
+0 0 * * * cd /scripts && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
 
 # 京喜工厂
 10 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
@@ -69,19 +69,19 @@
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
 # 京东食力街
-10 0 * * * cd /scripts && npx ts-node jd_foodRuning.ts >> /scripts/logs/jd_foodRuning.log 2>&1
+10 0 * * * cd /scripts && npx ts-node /scripts/jd_foodRuning.ts >> /scripts/logs/jd_foodRuning.log 2>&1
 
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
 # 东东农场额外任务
-0 11,12 * * * cd /scripts/ && npx ts-node jd_fruit_moreTask.ts >> /scripts/log/jd_fruit_moreTask.log 2>&1
+0 11,12 * * * cd /scripts/ && npx ts-node /scripts/jd_fruit_moreTask.ts >> /scripts/log/jd_fruit_moreTask.log 2>&1
 
 # 早起领豆
-30 0 * * * cd /scripts/ && npx ts-node jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
+30 0 * * * cd /scripts/ && npx ts-node /scripts/jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
 
 # 获取互助码
-0 20 * * 6 cd /scripts/ && npx ts-node jd_getShareCodes.ts >> /scripts/logs/jd_getShareCodes.log 2>&1
+0 20 * * 6 cd /scripts/ && npx ts-node /scripts/jd_getShareCodes.ts >> /scripts/logs/jd_getShareCodes.log 2>&1
 
 # 金榜创造营
 13 1,22 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1

@@ -6,7 +6,7 @@
 
 
 # 88红包
-5 0,6,20 * * * cd /scripts/ && npx ts-node /scripts/jd_88hb.ts >> /scripts/logs/jd_88hb.log 2>&1
+5 0,6,18 * * * cd /scripts/ && npx tsc /scripts/jd_88hb.ts && node /scripts/jd_88hb.js >> /scripts/logs/jd_88hb.log 2>&1
 
 # 抽奖
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
@@ -47,6 +47,9 @@
 # 京喜财富岛提现
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
 
+# 城城领现金
+0 0-23/1 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
+
 # cookie有效性检查
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
 
@@ -69,7 +72,7 @@
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
 # 京东食力街
-10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_foodRuning.ts >> /scripts/logs/jd_foodRuning.log 2>&1
+10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_foodRunning.ts >> /scripts/logs/jd_foodRunning.log 2>&1
 
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
@@ -102,7 +105,7 @@
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 
 # 宠汪汪
-15 0-23/2 * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy.log 2>&1
+0-23/2 * * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy.log 2>&1
 
 # 汪汪乐园
 0 9 * * * cd /scripts/ && npx ts-node /scripts/jd_joy_park.ts >> /scripts/logs/jd_joy_park.log 2>&1
@@ -147,7 +150,7 @@
 1 7-21/2 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
 
 # 京东全民开红包
-1 1,2,23 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
+1 0,2,18 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 
 # 闪购盲盒
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1

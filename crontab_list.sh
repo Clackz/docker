@@ -12,13 +12,10 @@
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 升级赚京豆
-0 9,12 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
+1 0,9,18,22 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
 
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
-
-# 领京豆额外奖励
-10 7 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 
 # 京东多合一签到
 7 0,17 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_sign.ts >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -35,20 +32,17 @@
 # 京东汽车兑换
 0 0 * * * node /scripts/jd_car_exchange.js >> /scripts/logs/jd_car_exchange.log 2>&1
 
+# 京东手机狂欢城
+5 0-18/6 * * * node /scripts/jd_carnivalcity.js >> /scripts/logs/jd_carnivalcity.log 2>&1
+
 # 京喜财富岛
 25 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
-# 京喜财富岛热气球
-10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_balloon.ts >> /scripts/logs/jd_cfd_balloon.log 2>&1
+# 京喜财富岛红包
+0 0 * * * node /scripts/jd_cfd_hb.js >> /scripts/logs/jd_cfd_hb.log
 
 # 京喜财富岛捡贝壳
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_shell.ts >> /scripts/logs/jd_cfd_shell.log 2>&1
-
-# 京喜财富岛提现
-0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_withdraw.ts >> /scripts/logs/jd_cfd_withdraw.log 2>&1
-
-# 城城领现金
-0 0-23/1 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
 
 # cookie有效性检查
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
@@ -104,6 +98,9 @@
 # 领金贴
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 
+# 京享红包
+0 0,12,18 * * * node /scripts/jd_jingxianghongbao.js >> /scripts/logs/jd_jingxianghongbao.log 2>&1
+
 # 宠汪汪
 0-23/2 * * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy.log 2>&1
 
@@ -115,6 +112,9 @@
 
 # 惊喜牧场
 20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
+
+# 惊喜牧场牛子
+0,30 * * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc_getCoin.ts >> /scripts/logs/jd_jxmc_getCoin.log 2>&1
 
 # 京喜农场
 0 9,12,18 * * * node /scripts/jd_jxnc.js >> /scripts/logs/jd_jxnc.log 2>&1
@@ -173,11 +173,20 @@
 # 赚京豆
 10 0,7,23 * * * node /scripts/jd_syj.js >> /scripts/logs/jd_syj.log 2>&1
 
+# 京东特物
+0 * * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
+
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
 
 # 京东预存验证码
 58 7,15,23 * * * cd /scripts/ && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
+
+# 家电星推官
+0 0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_xtg.ts >> /scripts/logs/jd_xtg.log 2>&1
+
+# 京喜牛牛福利社
+1 0,9,19,23 * * * cd /scripts/ && npx ts-node /scripts/jx_nnfls.ts >> /scripts/logs/jx_nnfls.log 2>&1
 
 # 京喜签到
 0 0 * * * cd /scripts/ && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1

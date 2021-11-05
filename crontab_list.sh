@@ -35,6 +35,9 @@
 # 京东手机狂欢城
 5 0-18/6 * * * node /scripts/jd_carnivalcity.js >> /scripts/logs/jd_carnivalcity.log 2>&1
 
+# 签到领现金
+2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
+
 # 京喜财富岛
 25 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
@@ -61,6 +64,9 @@
 
 # 京喜工厂助力
 50 * * * * node /scripts/jd_dreamFactory_help.js >> /scripts/logs/jd_dreamFactory_help.log 2>&1
+
+# 发财大赢家
+0 * * * * node /scripts/jd_facai.js >> /scripts/logs/jd_facai.log 2>&1
 
 # 京东家庭号
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1

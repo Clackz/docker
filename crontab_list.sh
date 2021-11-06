@@ -72,7 +72,7 @@
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
 # 京东食力街
-10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_foodRunning.ts >> /scripts/logs/jd_foodRunning.log 2>&1
+20 0 * * * cd /scripts/ && npx ts-node /scripts/jd_foodRunning.ts >> /scripts/logs/jd_foodRunning.log 2>&1
 
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
@@ -138,7 +138,7 @@
 0 * * * * cd /scripts/ && npx tsc /scripts/jd_mofang.ts && node /scripts/jd_mofang.js >> /scripts/logs/jd_mofang.log 2>&1
 
 # 京东摇钱树
-3 0-23/2 * * * cd /scripts/ && npx ts-node /scripts/jd_moneyTree.ts >> /scripts/logs/jd_moneyTree.log 2>&1
+10 0-23/2 * * * cd /scripts/ && npx ts-node /scripts/jd_moneyTree.ts >> /scripts/logs/jd_moneyTree.log 2>&1
 
 # 京东秒秒币
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1

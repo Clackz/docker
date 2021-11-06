@@ -12,7 +12,7 @@
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 升级赚京豆
-1 0,9,18,22 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
+1 0,9,12,18 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
 
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
@@ -39,7 +39,7 @@
 2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 
 # 京喜财富岛
-25 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
 # 京喜财富岛红包
 0 0 * * * node /scripts/jd_cfd_hb.js >> /scripts/logs/jd_cfd_hb.log
@@ -57,7 +57,7 @@
 0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 
 # 东东世界
-0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
+5 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
 
 # 京喜工厂
 10 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
@@ -66,7 +66,7 @@
 50 * * * * node /scripts/jd_dreamFactory_help.js >> /scripts/logs/jd_dreamFactory_help.log 2>&1
 
 # 发财大赢家
-0 * * * * node /scripts/jd_facai.js >> /scripts/logs/jd_facai.log 2>&1
+#0 * * * * node /scripts/jd_facai.js >> /scripts/logs/jd_facai.log 2>&1
 
 # 京东家庭号
 1 12,23 * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
@@ -117,7 +117,7 @@
 30 * * * * cd /scripts/ && npx ts-node /scripts/jd_jxgc.ts >> /scripts/logs/jd_jxgc.log 2>&1
 
 # 惊喜牧场
-20 0-23/3 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
+10 0,12,18 * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc.ts >> /scripts/logs/jd_jxmc.log 2>&1
 
 # 惊喜牧场牛子
 0,30 * * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc_getCoin.ts >> /scripts/logs/jd_jxmc_getCoin.log 2>&1
@@ -156,7 +156,10 @@
 1 7-21/2 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
 
 # 京东全民开红包
-1 0,2,18 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
+#1 0,2,18 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
+
+# 宠汪汪积分兑换京豆
+0 0-16/8 * * * node /scripts/jd_reward.js >> /scripts/logs/jd_reward.log 2>&1
 
 # 闪购盲盒
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
@@ -165,10 +168,10 @@
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1
 
 # 京东极速版发财大赢家
-0 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
+1 0,8,18 * * * cd /scripts/ && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
 
 # 京东极速版红包
-20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
+10 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
 
 # 京东极速版签到
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
@@ -177,10 +180,10 @@
 11 * * * * node /scripts/jd_superMarket.js >> /scripts/logs/jd_superMarket.log 2>&1
 
 # 赚京豆
-10 0,7,23 * * * node /scripts/jd_syj.js >> /scripts/logs/jd_syj.log 2>&1
+#10 0,7,23 * * * node /scripts/jd_syj.js >> /scripts/logs/jd_syj.log 2>&1
 
 # 京东特物
-0 * * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
+0 9-20/1 * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
 
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
@@ -191,11 +194,14 @@
 # 家电星推官
 0 0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_xtg.ts >> /scripts/logs/jd_xtg.log 2>&1
 
+# 京喜88红包宝箱
+5 0,6,12 * * * cd /scripts/ && npx ts-node /scripts/jx_box.ts >> /scripts/logs/jx_box.log 2>&1
+
 # 京喜牛牛福利社
 1 0,9,19,23 * * * cd /scripts/ && npx ts-node /scripts/jx_nnfls.ts >> /scripts/logs/jx_nnfls.log 2>&1
 
 # 京喜签到
-0 0 * * * cd /scripts/ && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1
+#0 0 * * * cd /scripts/ && npx ts-node /scripts/jx_sign.ts >> /scripts/logs/jx_sign.log 2>&1
 
 # 环境测试
 0 12 * * * cd /scripts/ && npx ts-node /scripts/jd_api_test.ts >> /scripts/logs/jd_api_test.log 2>&1

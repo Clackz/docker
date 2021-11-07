@@ -194,6 +194,9 @@
 # 家电星推官
 0 0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_xtg.ts >> /scripts/logs/jd_xtg.log 2>&1
 
+# 伊利养牛
+0 0,12,23 * * * cd /scripts/ && npx ts-node /scripts/jd_yili_cow.ts >> /scripts/logs/jd_yili_cow.log 2>&1
+
 # 京喜88红包宝箱
 5 0,6,12 * * * cd /scripts/ && npx ts-node /scripts/jx_box.ts >> /scripts/logs/jx_box.log 2>&1
 

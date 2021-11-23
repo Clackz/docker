@@ -108,7 +108,7 @@
 #0 0,12,18 * * * node /scripts/jd_jingxianghongbao.js >> /scripts/logs/jd_jingxianghongbao.log 2>&1
 
 # 宠汪汪
-0-23/2 * * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy.log 2>&1
+0-23/2 * * * * cd /scripts/ && npx ts-node /scripts/jd_joy_new.ts >> /scripts/logs/jd_joy.log 2>&1
 
 # 汪汪乐园
 0 9 * * * cd /scripts/ && npx ts-node /scripts/jd_joy_park.ts >> /scripts/logs/jd_joy_park.log 2>&1

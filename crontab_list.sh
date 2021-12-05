@@ -8,8 +8,11 @@
 # 88红包
 5 0,6,18 * * * cd /scripts/ && npx tsc /scripts/jd_88hb.ts && node /scripts/jd_88hb.js >> /scripts/logs/jd_88hb.log 2>&1
 
+# 质量报告
+0 0 * * 1 cd /scripts/ && npx ts-node /scripts/jd_Last_Week_income.ts >> /scripts/logs/jd_Last_Week_income.log 2>&1
+
 # 抽奖
-10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
+#10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_IndustryLottery.ts >> /scripts/logs/jd_IndustryLottery.log 2>&1
 
 # 升级赚京豆
 1 0,9,12,18 * * * cd /scripts/ && npx ts-node /scripts/jd_bean_box.ts >> /scripts/logs/jd_bean_box.log 2>&1
@@ -41,8 +44,11 @@
 # 京喜财富岛
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
+# 京喜财富岛-合成游戏
+30 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_game.ts >> /scripts/logs/jd_cfd_game.log 2>&1
+
 # 京喜财富岛红包
-0 0 * * * node /scripts/jd_cfd_hb.js >> /scripts/logs/jd_cfd_hb.log
+#0 0 * * * node /scripts/jd_cfd_hb.js >> /scripts/logs/jd_cfd_hb.log
 
 # 京喜财富岛捡贝壳
 10 0 * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_shell.ts >> /scripts/logs/jd_cfd_shell.log 2>&1
@@ -54,7 +60,7 @@
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 
 # 天天提鹅
-0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
+#0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 
 # 东东世界
 5 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
@@ -99,10 +105,13 @@
 10 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1
 
 # 京东赚赚
-10 0 * * * node /scripts/jd_jdzz.js >> /scripts/logs/jd_jdzz.log 2>&1
+#10 0 * * * node /scripts/jd_jdzz.js >> /scripts/logs/jd_jdzz.log 2>&1
 
 # 领金贴
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
+
+# 京东-锦鲤红包
+2 0,6,18 * * * cd /scripts/ && npx ts-node /scripts/jd_jinlihongbao.ts >> /scripts/logs/jd_jinlihongbao.log 2>&1
 
 # 京享红包
 #0 0,12,18 * * * node /scripts/jd_jingxianghongbao.js >> /scripts/logs/jd_jingxianghongbao.log 2>&1

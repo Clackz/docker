@@ -84,7 +84,7 @@
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
 # 东东农场额外任务
-0 11,12 * * * cd /scripts/ && npx ts-node /scripts/jd_fruit_moreTask.ts >> /scripts/log/jd_fruit_moreTask.log 2>&1
+0 11,12 * * * cd /scripts/ && npx ts-node /scripts/jd_fruit_moreTask.ts >> /scripts/logs/jd_fruit_moreTask.log 2>&1
 
 # 早起领豆
 30 0 * * * cd /scripts/ && npx ts-node /scripts/jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
@@ -111,7 +111,7 @@
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 
 # 京东-锦鲤红包
-2 0,6,18 * * * cd /scripts/ && npx ts-node /scripts/jd_jinlihongbao.ts >> /scripts/logs/jd_jinlihongbao.log 2>&1
+1 0,6,18 * * * cd /scripts/ && npx ts-node /scripts/jd_jinli_hongbao.ts >> /scripts/logs/jd_jinli_hongbao.log 2>&1
 
 # 京享红包
 #0 0,12,18 * * * node /scripts/jd_jingxianghongbao.js >> /scripts/logs/jd_jingxianghongbao.log 2>&1
@@ -155,6 +155,9 @@
 # 女装盲盒
 35 1,23 * * * node /scripts/jd_nzmh.js >> /scripts/logs/jd_nzmh.log 2>&1
 
+# 下单返红包助力
+30 0,9,17 * * * cd /scripts/ && npx ts-node /scripts/jd_order_cashback.ts >> /scripts/logs/jd_order_cashback.log 2>&1
+
 # 东东萌宠
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
 
@@ -184,6 +187,9 @@
 
 # 京东极速版签到
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
+
+# 金榜
+0 0,15 * * * cd /scripts/ && npx ts-node /scripts/jd_splitHongbao.ts >> /scripts/logs/jd_splitHongbao.log 2>&1
 
 # 东东超市
 11 * * * * node /scripts/jd_superMarket.js >> /scripts/logs/jd_superMarket.log 2>&1

@@ -102,7 +102,7 @@
 5-45/20 * * * * node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
 
 # 京豆兑换喜豆
-0 6 * * * cd /scripts/ && npx ts-node /scripts/jd_jd2xd.ts >> /scripts/logs/jd_jd2xd.log 2>&1
+#0 6 * * * cd /scripts/ && npx ts-node /scripts/jd_jd2xd.ts >> /scripts/logs/jd_jd2xd.log 2>&1
 
 # 东东工厂
 10 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1

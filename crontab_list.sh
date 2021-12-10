@@ -96,7 +96,10 @@
 13 1,22 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
 
 # 东东健康社区
-13 1,6,22 * * * node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
+35 0,6,18 * * * cd /scripts/ && npx ts-node /scripts/jd_health.ts >> /scripts/logs/jd_health.log 2>&1
+
+# 东东健康社区
+13 1,6,22 * * * node /scripts/jd_health2.js >> /scripts/logs/jd_health2.log 2>&1
 
 # 东东健康社区收集能量收集
 5-45/20 * * * * node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1

@@ -6,7 +6,7 @@
 
 
 # 88红包
-5 0,6,18 * * * cd /scripts/ && npx tsc /scripts/jd_88hb.ts && node /scripts/jd_88hb.js >> /scripts/logs/jd_88hb.log 2>&1
+5 0,6,14 * * * cd /scripts/ && npx tsc /scripts/jd_88hb.ts && node /scripts/jd_88hb.js >> /scripts/logs/jd_88hb.log 2>&1
 
 # 质量报告
 0 0 * * 1 cd /scripts/ && npx ts-node /scripts/jd_Last_Week_income.ts >> /scripts/logs/jd_Last_Week_income.log 2>&1

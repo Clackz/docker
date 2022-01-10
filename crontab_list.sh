@@ -56,6 +56,9 @@
 # cookie有效性检查
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
 
+# 城城领现金
+0 0-23/1 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
+
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 
@@ -63,7 +66,7 @@
 #0 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 
 # 东东世界
-5 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
+#5 0,8,20 * * * cd /scripts/ && npx ts-node /scripts/jd_ddWorld.ts >> /scripts/logs/jd_ddWorld.log 2>&1
 
 # 京喜工厂
 10 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1

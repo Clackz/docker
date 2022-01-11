@@ -57,7 +57,10 @@
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
 
 # 城城领现金
-0 0-23/1 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
+0 0-23/1 * * * cd /scripts/ && npx ts-node /scripts/jd_city1.ts >> /scripts/logs/jd_city1.log 2>&1
+
+# 城城领现金
+15 0-23/1 * * * node /scripts/jd_city2.js >> /scripts/logs/jd_city2.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1

@@ -1,3 +1,5 @@
+![Docker Pulls](https://img.shields.io/docker/pulls/clackz/jdhello)
+
 # 自用脚本，修改自lxk0301大佬的docker，配合[JDHelloWorld/jd_scripts](https://github.com/JDHelloWorld/jd_scripts)使用
 
 ## 环境变量说明

@@ -6,7 +6,7 @@
 
 
 # 88红包
-5 0,6,14 * * * cd /scripts/ && npx ts-node /scripts/jd_88.ts >> /scripts/logs/jd_88.log 2>&1
+#5 0,6,14 * * * cd /scripts/ && npx ts-node /scripts/jd_88.ts >> /scripts/logs/jd_88.log 2>&1
 
 # 质量报告
 0 0 * * 1 cd /scripts/ && npx ts-node /scripts/jd_Last_Week_income.ts >> /scripts/logs/jd_Last_Week_income.log 2>&1
@@ -57,10 +57,10 @@
 0 * * * * cd /scripts/ && npx ts-node /scripts/jd_checkCookie.ts >> /scripts/logs/jd_checkCookie.log 2>&1
 
 # 城城领现金
-0 0-23/1 * * * cd /scripts/ && npx ts-node /scripts/jd_city1.ts >> /scripts/logs/jd_city1.log 2>&1
+#0 0-23/1 * * * cd /scripts/ && npx ts-node /scripts/jd_city1.ts >> /scripts/logs/jd_city1.log 2>&1
 
 # 城城领现金
-15 0-23/1 * * * node /scripts/jd_city2.js >> /scripts/logs/jd_city2.log 2>&1
+#15 0-23/1 * * * node /scripts/jd_city2.js >> /scripts/logs/jd_city2.log 2>&1
 
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
@@ -129,7 +129,7 @@
 #0 0,12,18 * * * node /scripts/jd_jingxianghongbao.js >> /scripts/logs/jd_jingxianghongbao.log 2>&1
 
 # 宠汪汪
-0-23/2 * * * * cd /scripts/ && npx ts-node /scripts/jd_joy_new.ts >> /scripts/logs/jd_joy.log 2>&1
+#0-23/2 * * * * cd /scripts/ && npx ts-node /scripts/jd_joy_new.ts >> /scripts/logs/jd_joy.log 2>&1
 
 # 汪汪乐园
 0 9 * * * cd /scripts/ && npx ts-node /scripts/jd_joy_park.ts >> /scripts/logs/jd_joy_park.log 2>&1
@@ -144,7 +144,7 @@
 0,30 * * * * cd /scripts/ && npx ts-node /scripts/jd_jxmc_getCoin.ts >> /scripts/logs/jd_jxmc_getCoin.log 2>&1
 
 # 京喜农场
-0 9,12,18 * * * node /scripts/jd_jxnc.js >> /scripts/logs/jd_jxnc.log 2>&1
+#0 9,12,18 * * * node /scripts/jd_jxnc.js >> /scripts/logs/jd_jxnc.log 2>&1
 
 # 京东快递签到
 10 0 * * * node /scripts/jd_kd.js >> /scripts/logs/jd_kd.log 2>&1
@@ -201,7 +201,7 @@
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 
 # 金榜
-0 0,15 * * * cd /scripts/ && npx ts-node /scripts/jd_splitHongbao.ts >> /scripts/logs/jd_splitHongbao.log 2>&1
+#0 0,15 * * * cd /scripts/ && npx ts-node /scripts/jd_splitHongbao.ts >> /scripts/logs/jd_splitHongbao.log 2>&1
 
 # 东东超市
 11 * * * * node /scripts/jd_superMarket.js >> /scripts/logs/jd_superMarket.log 2>&1
@@ -222,7 +222,7 @@
 58 7,15,23 * * * cd /scripts/ && node /scripts/jd_validate_Worker.js >> /scripts/logs/jd_validate_Worker.log 2>&1
 
 # 家电星推官
-0 0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_xtg.ts >> /scripts/logs/jd_xtg.log 2>&1
+#0 0 0 * * * cd /scripts/ && npx ts-node /scripts/jd_xtg.ts >> /scripts/logs/jd_xtg.log 2>&1
 
 # 伊利养牛
 0 0,12,23 * * * cd /scripts/ && npx ts-node /scripts/jd_yili_cow.ts >> /scripts/logs/jd_yili_cow.log 2>&1

@@ -96,7 +96,7 @@
 30 0 * * * cd /scripts/ && npx ts-node /scripts/jd_getUp.ts >> /scripts/logs/jd_getUp.log 2>&1
 
 # 获取互助码
-0 20 * * 6 cd /scripts/ && npx ts-node /scripts/jd_getShareCodes.ts >> /scripts/logs/jd_getShareCodes.log 2>&1
+59 23 * * 0 cd /scripts/ && npx ts-node /scripts/jd_getShareCodes.ts >> /scripts/logs/jd_getShareCodes.log 2>&1
 
 # 金榜创造营
 13 1,22 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
@@ -209,8 +209,11 @@
 # 赚京豆
 #10 0,7,23 * * * node /scripts/jd_syj.js >> /scripts/logs/jd_syj.log 2>&1
 
+# 萌虎
+0 0,9,16 * * * cd /scripts/ && npx ts-node /scripts/jd_tiger.ts >> /scripts/logs/jd_tiger.log 2>&1
+
 # 京东特物
-0 9-20/1 * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
+#0 9-20/1 * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
 
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1

@@ -183,7 +183,7 @@
 #1 0,2,18 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 
 # 宠汪汪积分兑换京豆
-0 0-16/8 * * * node /scripts/jd_reward.js >> /scripts/logs/jd_reward.log 2>&1
+#0 0-16/8 * * * node /scripts/jd_reward.js >> /scripts/logs/jd_reward.log 2>&1
 
 # 闪购盲盒
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
@@ -213,7 +213,7 @@
 0 0,9,16 * * * cd /scripts/ && npx ts-node /scripts/jd_tiger.ts >> /scripts/logs/jd_tiger.log 2>&1
 
 # 京东特物
-#0 9-20/1 * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
+15 1,22 * * * cd /scripts/ && npx ts-node /scripts/jd_tewu.ts >> /scripts/logs/jd_tewu.log 2>&1
 
 # 取关京东店铺和商品
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1

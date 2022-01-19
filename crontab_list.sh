@@ -42,7 +42,7 @@
 2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 
 # 京喜财富岛
-0 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
+40 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd.ts >> /scripts/logs/jd_cfd.log 2>&1
 
 # 京喜财富岛-合成游戏
 30 * * * * cd /scripts/ && npx ts-node /scripts/jd_cfd_game.ts >> /scripts/logs/jd_cfd_game.log 2>&1
@@ -192,10 +192,10 @@
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1
 
 # 京东极速版发财大赢家
-1 0,8,18 * * * cd /scripts/ && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
+#1 0,8,18 * * * cd /scripts/ && npx ts-node /scripts/jd_speed_redEnvelope.ts >> /scripts/logs/jd_speed_redEnvelope.log 2>&1
 
 # 京东极速版红包
-10 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
+20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
 
 # 京东极速版签到
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
@@ -226,6 +226,9 @@
 
 # 伊利养牛
 0 0,12,23 * * * cd /scripts/ && npx ts-node /scripts/jd_yili_cow.ts >> /scripts/logs/jd_yili_cow.log 2>&1
+
+# 京喜-天天压岁钱
+5 0,9,18 * * * cd /scripts/ && npx ts-node /scripts/jd_ysq.ts >> /scripts/logs/jd_ysq.log 2>&1
 
 # 京喜88红包宝箱
 5 0,6,12 * * * cd /scripts/ && npx ts-node /scripts/jx_box.ts >> /scripts/logs/jx_box.log 2>&1
